@@ -13,10 +13,13 @@
     <ul class="right">
       <li class="divider hide-for-small"></li>
       <% if user_signed_in? %>
-        <li>
-          <p style="color: dodgerblue"><%= current_user.email %></p>
-        </li>
-        <li>
+          <li>
+           <h6 style="color: dodgerblue"><%= current_user.email %></h6>
+          </li>
+          <li>
+            <%= link_to 'Profile', users_profile_path %>
+          </li>
+          <li>
             <%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %>
         </li>
       <% else %>
