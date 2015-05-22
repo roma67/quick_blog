@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :posts do
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :destroy]
   end
   controller :main do
     get :about
   end
 
-  get 'posts', as: 'user_root'
+  # get 'posts', as: 'user_root'
 
 
     # The priority is based upon order of creation: first created -> highest priority.

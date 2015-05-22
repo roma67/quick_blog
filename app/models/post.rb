@@ -1,4 +1,10 @@
 class Post < ActiveRecord::Base
-  has_many :comments
-  validates_presence_of :body, :title
+
+
+  has_many :comments, dependent: :destroy
+  belongs_to :user
+
+
+  validates :body, :title, :user, presence: true
+
 end

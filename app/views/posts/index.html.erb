@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing posts</h1>
+<h4><%= link_to 'New Post', new_post_path if user_signed_in? %></h4>
+
+<h1 align="center">Listing posts</h1>
 
 <%= render partial: @posts %>
 
-<%= link_to 'New Post', new_post_path %>

@@ -1,9 +1,11 @@
 <%= div_for comment do %>
     <p>
       <strong>
-        Posted <%= time_ago_in_words(comment.created_at) %> ago
+        Posted <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.email %>
       </strong>
       <br/>
       <%= comment.body %>
+      <br/>
+      <%= link_to 'Delete', post_comment_path(@post, comment), method: 'delete' if comment.user == current_user %>
     </p>
 <% end %>

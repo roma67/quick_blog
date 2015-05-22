@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate, except: [ :index, :show ]
+  before_filter :authenticate_user!, except: [ :index, :show ]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    @post.user = current_user
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -80,9 +80,4 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :body)
     end
 
-  def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "secret"
-    end
-  end
 end
