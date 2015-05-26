@@ -1,0 +1,1 @@
+config.stretches = Rails.env.test? ? 1 : 10
