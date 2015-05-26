@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ef06b43-be08-4de7-9fe1-2f270022d78d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/support/devise.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/features/managing_post_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/features/post_comments_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/quick_blog.iml" afterPath="$PROJECT_DIR$/.idea/quick_blog.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/rails_helper.rb" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/reading_blog_spec.rb" afterPath="$PROJECT_DIR$/spec/features/reading_blog_spec.rb" />
